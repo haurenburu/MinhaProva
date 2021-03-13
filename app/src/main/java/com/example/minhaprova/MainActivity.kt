@@ -8,6 +8,7 @@ import android.widget.Toast
 import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.ViewModelProvider
 import com.example.minhaprova.databinding.ActivityMainBinding
+import com.google.android.material.snackbar.Snackbar
 
 class MainActivity : AppCompatActivity() {
     lateinit var binding: ActivityMainBinding
@@ -48,7 +49,7 @@ class MainActivity : AppCompatActivity() {
         super.onActivityResult(requestCode, resultCode, data)
         if(requestCode == 1) {
             if (resultCode == Activity.RESULT_CANCELED) {
-                Toast.makeText(this, "NAO TA FUNCIONANDO O SNACK", Toast.LENGTH_SHORT).show()
+                Snackbar.make(binding.linear, "Cancelou", Snackbar.LENGTH_LONG).show()
             } else if (resultCode == Activity.RESULT_OK) {
                 viewmodel.name = data?.getStringExtra("RESPOSTA").toString()
                 binding.text1.text = viewmodel.name
