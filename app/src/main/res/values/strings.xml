@@ -6,4 +6,8 @@
     <string name="button4">R.id.button4</string>
     <string name="text1">R.id.text1</string>
     <string name="text2">R.id.text2</string>
+    <string name="buttonOk">Ok</string>
+    <string name="buttonCancel">Cancelar</string>
+    <string name="erro1">Nao pode ser vazio</string>
+
 </resources>
