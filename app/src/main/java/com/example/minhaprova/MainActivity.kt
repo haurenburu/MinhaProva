@@ -8,7 +8,6 @@ import android.widget.Toast
 import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.ViewModelProvider
 import com.example.minhaprova.databinding.ActivityMainBinding
-import com.google.android.material.snackbar.Snackbar
 
 class MainActivity : AppCompatActivity() {
     lateinit var binding: ActivityMainBinding
@@ -32,6 +31,11 @@ class MainActivity : AppCompatActivity() {
         binding.button1.setOnClickListener {
             val intent = Intent(this, ActivityAcao1::class.java)
             startActivityForResult(intent, 1)
+        }
+
+        binding.button2.setOnClickListener {
+            val dialog = CafeDialog()
+            dialog.show(supportFragmentManager, "quercafe")
         }
     }
 
