@@ -98,5 +98,14 @@
             app:layout_constraintBottom_toBottomOf="@+id/buttonOk"
             app:layout_constraintStart_toEndOf="@+id/buttonOk"
             app:layout_constraintTop_toTopOf="@+id/buttonOk" />
+
+        <RatingBar
+            android:id="@+id/ratingBar"
+            android:layout_width="240dp"
+            android:layout_height="54dp"
+            android:layout_marginStart="16dp"
+            app:layout_constraintBottom_toBottomOf="@+id/textViewRate"
+            app:layout_constraintStart_toEndOf="@+id/textViewRate"
+            app:layout_constraintTop_toTopOf="@+id/textViewRate" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

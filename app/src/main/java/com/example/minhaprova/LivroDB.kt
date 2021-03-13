@@ -15,7 +15,7 @@ class LivroDB(context: Context) : SQLiteOpenHelper(context, LivroContrato.DATABA
                 "${LivroContrato.LivroEntry.NOME} TEXT," +
                 "${LivroContrato.LivroEntry.AUTOR} TEXT," +
                 "${LivroContrato.LivroEntry.NOTA} INTEGER," +
-                "${LivroContrato.LivroEntry.ANO} INTEGER)"
+                "${LivroContrato.LivroEntry.ANO} FLOAT)"
     val SQL_DROP_TABLE =
         "DROP TABLE ${LivroContrato.LivroEntry.TABLE_NAME}"
 
@@ -60,7 +60,7 @@ class LivroDB(context: Context) : SQLiteOpenHelper(context, LivroContrato.DATABA
             livro.id = cursor.getInt(cursor.getColumnIndex(BaseColumns._ID))
             livro.nome = cursor.getString(cursor.getColumnIndex(LivroContrato.LivroEntry.NOME))
             livro.autor = cursor.getString(cursor.getColumnIndex(LivroContrato.LivroEntry.AUTOR))
-            livro.nota = cursor.getInt(cursor.getColumnIndex(LivroContrato.LivroEntry.NOTA))
+            livro.nota = cursor.getFloat(cursor.getColumnIndex(LivroContrato.LivroEntry.NOTA))
             livro.ano = cursor.getInt(cursor.getColumnIndex(LivroContrato.LivroEntry.ANO))
 
             return livro

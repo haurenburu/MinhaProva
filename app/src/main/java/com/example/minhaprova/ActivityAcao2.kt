@@ -22,13 +22,14 @@ class ActivityAcao2 : AppCompatActivity() {
             val name = binding.editTextName.text.toString()
             val author = binding.editTextAuthor.text.toString()
             val ano = binding.editTextAno.text.toString()
+            val rate = binding.ratingBar.rating
 
-            if(name != "" && author != "" && ano != "" ) {
+            if(name != "" && author != "" && ano != "") {
                 val l = Livro(0,
                     name,
                     author,
                     ano.toInt(),
-                    5
+                    rate
                 )
 
                 val db = LivroDB(this)

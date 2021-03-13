@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ActivityAcao3">
+
+    <TextView
+        android:id="@+id/textView3Name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="32dp"
+        android:text="@string/textviewName"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView3Author"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="@string/textviewAuthor"
+        app:layout_constraintEnd_toEndOf="@+id/textView3Name"
+        app:layout_constraintStart_toStartOf="@+id/textView3Name"
+        app:layout_constraintTop_toBottomOf="@+id/textView3Name" />
+
+    <TextView
+        android:id="@+id/textView3Year"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="@string/textviewYear"
+        app:layout_constraintEnd_toEndOf="@+id/textView3Author"
+        app:layout_constraintStart_toStartOf="@+id/textView3Author"
+        app:layout_constraintTop_toBottomOf="@+id/textView3Author" />
+
+    <TextView
+        android:id="@+id/textView3Rate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="@string/textviewRate"
+        app:layout_constraintEnd_toEndOf="@+id/textView3Year"
+        app:layout_constraintStart_toStartOf="@+id/textView3Year"
+        app:layout_constraintTop_toBottomOf="@+id/textView3Year" />
+
+    <Button
+        android:id="@+id/button3Prev"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginBottom="32dp"
+        android:text="@string/prev"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/button3Next"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="32dp"
+        android:text="@string/next"
+        app:layout_constraintBottom_toBottomOf="@+id/button3Prev"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/button3Prev" />
+</androidx.constraintlayout.widget.ConstraintLayout>
