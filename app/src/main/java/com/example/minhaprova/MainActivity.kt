@@ -21,6 +21,14 @@ class MainActivity : AppCompatActivity() {
         viewmodel = ViewModelProvider(this).get(MainActivityViewModel::class.java)
         binding.text1.text = viewmodel.name
 
+        val settings = getSharedPreferences("prefs", MODE_PRIVATE)
+        if (settings.getString("firstTime", "YES") == "YES") {
+            Toast.makeText(this, R.string.welcome, Toast.LENGTH_SHORT).show()
+            val editor = settings.edit()
+            editor.putString("firstTime", "NO")
+            editor.apply()
+        }
+
         binding.button1.setOnClickListener {
             val intent = Intent(this, ActivityAcao1::class.java)
             startActivityForResult(intent, 1)

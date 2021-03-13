@@ -8,6 +8,7 @@
     <string name="text2">R.id.text2</string>
     <string name="buttonOk">Ok</string>
     <string name="buttonCancel">Cancelar</string>
+    <string name="welcome">Bem-vindo</string>
     <string name="erro1">Nao pode ser vazio</string>
 
 </resources>
