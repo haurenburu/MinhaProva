@@ -10,5 +10,9 @@
     <string name="buttonCancel">Cancelar</string>
     <string name="welcome">Bem-vindo</string>
     <string name="erro1">Nao pode ser vazio</string>
+    <string name="textviewName">Titulo</string>
+    <string name="textviewYear">Ano</string>
+    <string name="textviewAuthor">Autor</string>
+    <string name="textviewRate">Nota</string>
 
 </resources>

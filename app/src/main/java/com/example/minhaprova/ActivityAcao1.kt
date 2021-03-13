@@ -32,7 +32,6 @@ class ActivityAcao1 : AppCompatActivity() {
             } else {
                 Toast.makeText(this, R.string.erro1, Toast.LENGTH_SHORT).show()
             }
-
         }
     }
 }

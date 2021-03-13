@@ -37,6 +37,11 @@ class MainActivity : AppCompatActivity() {
             val dialog = CafeDialog()
             dialog.show(supportFragmentManager, "quercafe")
         }
+
+        binding.button3.setOnClickListener {
+            val intent = Intent(this, ActivityAcao2::class.java)
+            startActivityForResult(intent, 2)
+        }
     }
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
@@ -47,6 +52,10 @@ class MainActivity : AppCompatActivity() {
             } else if (resultCode == Activity.RESULT_OK) {
                 viewmodel.name = data?.getStringExtra("RESPOSTA").toString()
                 binding.text1.text = viewmodel.name
+            }
+        } else if (requestCode == 2) {
+            if(resultCode == Activity.RESULT_OK) {
+                binding.text2.text = "Cadastrado"
             }
         }
     }
