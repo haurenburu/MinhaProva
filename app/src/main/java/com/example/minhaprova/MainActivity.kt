@@ -43,6 +43,11 @@ class MainActivity : AppCompatActivity() {
             val intent = Intent(this, ActivityAcao2::class.java)
             startActivityForResult(intent, 2)
         }
+
+        binding.button4.setOnClickListener {
+            val intent = Intent(this, ActivityAcao3::class.java)
+            startActivity(intent)
+        }
     }
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
